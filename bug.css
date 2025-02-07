@@ -1,0 +1,1 @@
+The CSS rule `:focus-visible` is not working as expected. I have a button element, and when it receives focus, the outline is displayed even when the element already has a visual change (e.g., a change of background color on hover).
