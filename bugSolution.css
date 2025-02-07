@@ -1,0 +1,21 @@
+To fix this issue, ensure that any visual changes that already indicate focus (such as the background color change on hover) do not prevent the ':focus-visible' pseudo-class from working correctly.  One solution is to separate the focus styles from the hover styles and only apply the outline when the focus is explicitly set and is not visually represented by other styling.
+
+Here's an example of how to modify the CSS to address this:
+```css
+button {
+  background-color: lightblue;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: lightgreen; 
+}
+
+button:focus-visible {
+  outline: 2px solid blue;
+  outline-offset: 2px;
+}
+```
+This revised CSS ensures that the `:focus-visible` outline will only be visible when focus is not already indicated visually by hover effects.
